@@ -45,6 +45,10 @@ Budg prioritizes user data protection with:
 - Nightly dependency scans with Dependabot and Snyk to address vulnerabilities.
 - Reasonable alignment with GDPR, CCPA, and SOC 2 principles, including data minimization and audit logging.
 
+## Build-Out Strategy
+
+Budg’s development and deployment roadmap is outlined in `Build-Out Strategy.md`. This includes plans for scaling infrastructure, enhancing features, and ensuring robust performance and security. Contributors can refer to this document for details on upcoming milestones and development priorities.
+
 ## License
 
 This project is licensed under the MIT License.
