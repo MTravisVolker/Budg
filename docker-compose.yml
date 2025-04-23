@@ -1,4 +1,18 @@
+version: '3.8'
+
 services:
+  # Frontend Build Service
+  frontend-builder:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    volumes:
+      - ./frontend/dist:/app/dist
+    environment:
+      - NODE_ENV=production
+    networks:
+      - budg-network
+
   # FastAPI Backend Service
   backend:
     build:
@@ -54,6 +68,7 @@ services:
       - "80:80"
       - "443:443"
     depends_on:
+      - frontend-builder
       - backend
     networks:
       - budg-network

@@ -24,50 +24,51 @@ The strategy is divided into phases, each delivering specific components and fun
 **Goal**: Establish the development environment, version control, CI/CD pipeline, and Dockerized infrastructure using free tools.
 
 **Deliverables**:
-- GitHub repository with branch protection and signed commits.
-- Docker Compose setup for FastAPI, PostgreSQL, Redis, and React SPA.
-- Basic CI/CD pipeline with GitHub Actions (build, test, security scans).
-- Documentation setup (Swagger UI, Markdown-based docs).
+ - [X] GitHub repository with branch protection and signed commits.
+ - [X] Docker Compose setup for FastAPI, PostgreSQL, Redis, and React SPA.
+ - [ ] Basic CI/CD pipeline with GitHub Actions (build, test, security scans).
+ - [ ] Documentation setup (Swagger UI, Markdown-based docs).
 
 **Dependencies**:
-- GitHub account (free tier).
-- Docker and Docker Compose installed locally.
-- Free tools: PostgreSQL, Redis, Node.js, Python 3.9+, Nginx (for frontend hosting).
+ - [ ] GitHub account (free tier).
+ - [ ] Docker and Docker Compose installed locally.
+ - [ ] Free tools: PostgreSQL, Redis, Node.js, Python 3.9+, Nginx (for frontend hosting).
 
 **Tasks**:
 1. **Version Control**:
-   - Create a public/private GitHub repository for Budg.
-   - Enable branch protection (require PRs, signed commits) and add `.gitignore` for Python, Node.js, and Docker.
-   - Initialize `README.md` with setup instructions.
+   - [X] Create a public/private GitHub repository for Budg.
+   - [X] Enable branch protection (require PRs, signed commits) and add `.gitignore` for Python, Node.js, and Docker.
+   - [ ] Initialize `README.md` with setup instructions.
+   - 
 2. **Local Environment**:
-   - Create `docker-compose.yml` for:
-     - FastAPI (Uvicorn).
-     - PostgreSQL (official image).
-     - Redis (official image).
-     - Nginx (to serve React SPA and proxy FastAPI).
-   - Configure `.env` for secrets (e.g., database credentials, Redis password).
-   - Build React SPA and serve static files via Nginx, proxying API requests to FastAPI.
+   - [X] Create `docker-compose.yml` for:
+     - [X] FastAPI (Uvicorn).
+     - [X] PostgreSQL (official image).
+     - [X] Redis (official image).
+     - [X] Nginx (to serve React SPA and proxy FastAPI).
+   - [X] Configure `.env` for secrets (e.g., database credentials, Redis password).
+   - [ ] Build React SPA and serve static files via Nginx, proxying API requests to FastAPI.
 3. **CI/CD Pipeline**:
-   - Set up GitHub Actions workflows for:
-     - **Build**: Compile Docker images for FastAPI and Nginx (React).
-     - **Test**: Run pytest (backend) and Jest (frontend) with coverage.
-     - **Security**: Run Dependabot (free tier), CodeQL (free for open-source), and Bandit (open-source).
-   - Store secrets in GitHub Actions (e.g., Docker Hub credentials).
+   - [ ] Set up GitHub Actions workflows for:
+     - [ ] **Build**: Compile Docker images for FastAPI and Nginx (React).
+     - [ ] **Test**: Run pytest (backend) and Jest (frontend) with coverage.
+     - [ ] **Security**: Run Dependabot (free tier), CodeQL (free for open-source), and Bandit (open-source).
+   - [ ] Store secrets in GitHub Actions (e.g., Docker Hub credentials).
 4. **Documentation**:
-   - Enable Swagger UI in FastAPI for API documentation.
-   - Create Markdown files in `/docs` for setup, architecture, and contribution guides.
-   - Use JSDoc for React components (instead of Storybook, to avoid setup complexity).
+   - [ ] Enable Swagger UI in FastAPI for API documentation.
+   - [ ] Create Markdown files in `/docs` for setup, architecture, and contribution guides.
+   - [ ] Use JSDoc for React components (instead of Storybook, to avoid setup complexity).
 
 **Automated Testing**:
-- Write basic pytest tests for Docker Compose health checks (e.g., FastAPI `/health` endpoint).
-- Write Jest tests for a sample React component (e.g., a loading spinner).
-- Configure Codecov (free tier) for coverage reporting.
+- [ ] Write basic pytest tests for Docker Compose health checks (e.g., FastAPI `/health` endpoint).
+- [ ] Write Jest tests for a sample React component (e.g., a loading spinner).
+- [ ] Configure Codecov (free tier) for coverage reporting.
 
 **Validation**:
-- Verify repository setup: Branch protection and signed commits are active.
-- Run `docker-compose up` to confirm FastAPI, PostgreSQL, Redis, and Nginx (React) are accessible.
-- Access Swagger UI (`/docs`) and Nginx-served React SPA (`localhost:80`).
-- Trigger CI/CD pipeline to ensure builds, tests, and scans pass.
+- [ ] Verify repository setup: Branch protection and signed commits are active.
+- [ ] Run `docker-compose up` to confirm FastAPI, PostgreSQL, Redis, and Nginx (React) are accessible.
+- [ ] Access Swagger UI (`/docs`) and Nginx-served React SPA (`localhost:80`).
+- [ ] Trigger CI/CD pipeline to ensure builds, tests, and scans pass.
 
 **Estimated Effort**: 1-2 weeks.
 
